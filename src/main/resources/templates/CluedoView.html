@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Cluedo</title>
+        <link rel="stylesheet" href="https://unpkg.com/mvp.css">
+    </head>
+    <body>
+        <header>
+            <h2>Cluedo</h2>
+        </header>
+        <main>
+            <section>
+                <header>
+                    <h1>Die Liste der Personen</h1>
+                </header>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Job</th>
+                            <th>Height</th>
+                            <th>Feature</th>
+                            <th>Color</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr th:each="person : ${dataList}">
+                            <td th:text="${person.name}">Name</td>
+                            <td th:text="${person.age}">Age</td>
+                            <td th:text="${person.job}">Job</td>
+                            <td th:text="${person.height}">Height</td>
+                            <td th:text="${person.feature}">Feature</td>
+                            <td th:text="${person.color}">Color</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </body>
+</html>

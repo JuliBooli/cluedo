@@ -2,13 +2,13 @@ package ch.bbw.ja.cluedo.datamodel;
 
 import java.util.List;
 
+
 public class Person {
     private String name;
     private int age;
     private String job;
     private double height;
     private String feature;
-
     private String color;
 
     public Person(String name, int age, String job, double height, String feature, String color) {
@@ -20,4 +20,27 @@ public class Person {
         this.color = color;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public String getJob() {
+        return job;
+    }
+
+    public double getHeight() {
+        return height;
+    }
+
+    public String getFeature() {
+        return feature;
+    }
+
+    public String getColor() {
+        return color;
+    }
 }

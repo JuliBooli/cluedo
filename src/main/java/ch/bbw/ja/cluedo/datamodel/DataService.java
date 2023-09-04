@@ -1,5 +1,7 @@
 package ch.bbw.ja.cluedo.datamodel;
 
+import org.springframework.stereotype.Service;
+
 import javax.xml.crypto.Data;
 import java.util.ArrayList;
 import java.util.List;
@@ -7,6 +9,7 @@ import java.util.List;
 /**
  * author: Julian Aschwanden
  */
+@Service
 public class DataService {
     private List<Person> people;
 
@@ -24,7 +27,10 @@ public class DataService {
         people.add(new Person("Aisha Patel", 34, "Environmental Activist", 1.63, "Nose Piercing", "Forest Green"));
         people.add(new Person("Professor Andrei Volkov", 61, "Astrophysicist", 1.75, "Wild Einstein-like Hair", "Cosmic Indigo"));
 
-
+    }
+    public List<Person> getPeople() {
+        System.out.println(people);
+        return people;
     }
 
 }
