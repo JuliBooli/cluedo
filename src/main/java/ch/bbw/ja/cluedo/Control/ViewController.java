@@ -17,7 +17,7 @@ public class ViewController {
         this.dataService = dataService;
     }
 
-    @GetMapping("/start")
+    @GetMapping("/")
     public String showView(Model model) {
         List<Person> people = dataService.getPeople();
         model.addAttribute("dataList", people);
