@@ -4,7 +4,7 @@ import java.util.List;
 
 
 public class Person {
-    private String name;
+    private String name; //Attribut, Eigenschaft eines Objektes: Ich Habe
     private int age;
     private String job;
     private double height;
@@ -18,6 +18,7 @@ public class Person {
         this.height = height;
         this.feature = feature;
         this.color = color;
+        //Wird benutzt um ein Objekt zu instanziieren und beim instanziieren Direktwert mitgeben
     }
 
     public String getName() {

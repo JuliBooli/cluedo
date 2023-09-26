@@ -2,6 +2,8 @@ package ch.bbw.ja.cluedo.Control;
 
 import ch.bbw.ja.cluedo.datamodel.DataService;
 import ch.bbw.ja.cluedo.datamodel.Person;
+import ch.bbw.ja.cluedo.datamodel.Room;
+import ch.bbw.ja.cluedo.datamodel.Weapon;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,7 +22,11 @@ public class ViewController {
     @GetMapping("/")
     public String showView(Model model) {
         List<Person> people = dataService.getPeople();
+        List<Weapon> weapons = dataService.getWeapons();
+        List<Room> room = dataService.getRoom();
         model.addAttribute("dataList", people);
+        model.addAttribute("weaponList", weapons);
+        model.addAttribute("roomList", room);
         return "CluedoView.html";
     }
 }

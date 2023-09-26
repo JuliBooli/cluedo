@@ -12,9 +12,13 @@ import java.util.List;
 @Service
 public class DataService {
     private List<Person> people;
+    private List<Weapon> weapons;
+    private List<Room> room;
 
     public DataService(){
         people = new ArrayList<>();
+        weapons= new ArrayList<>();
+        room = new ArrayList<>();
         loadObject();
     }
 
@@ -27,10 +31,28 @@ public class DataService {
         people.add(new Person("Aisha Patel", 34, "Environmental Activist", 1.63, "Nose Piercing", "Forest Green"));
         people.add(new Person("Professor Andrei Volkov", 61, "Astrophysicist", 1.75, "Wild Einstein-like Hair", "Cosmic Indigo"));
 
+        weapons.add(new Weapon("Poisoned Dagger", "Steel", 0.3, "Silent"));
+        weapons.add(new Weapon("Candlestick", "Brass", 0.8, "Dull Thud"));
+        weapons.add(new Weapon("Revolver", "Nickel-Plated", 0.25, "Gunshot"));
+        weapons.add(new Weapon("Rope", "Nylon", 2.0, "Strangling Sound"));
+        weapons.add(new Weapon("Lead Pipe", "Heavy Metal", 1.2, "Metallic Clang"));
+        weapons.add(new Weapon("Poisoned Wine Glass", "Crystal", 0.15, "Poison Bubbles"));
+
+        room.add(new Room("Library", "North Wing", "Bookshelves and Old Books"));
+        room.add(new Room("Conservatory", "East Wing", "Plants and Greenery"));
+        room.add(new Room("Billiard Room", "West Wing", "Billiard Table and Cue Sticks"));
+        room.add(new Room("Study", "South Wing", "Desk and Papers"));
+        room.add(new Room("Kitchen", "Basement", "Cooking Utensils and Food"));
+        room.add(new Room("Ballroom", "Main Floor", "Chandeliers and Dance Floor"));
+
     }
     public List<Person> getPeople() {
-        System.out.println(people);
         return people;
     }
-
+    public List<Weapon> getWeapons(){
+        return weapons;
+    }
+    public List<Room> getRoom(){
+        return room;
+    }
 }
