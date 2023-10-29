@@ -1,4 +1,4 @@
-package ch.bbw.ja.cluedo.datamodel;
+package ch.bbw.ja.cluedo.model;
 
 public class Room {
     private String name;

@@ -11,75 +11,84 @@
         </header>
         <main>
             <section>
-                <header>
-                    <h1>Die Liste der Personen</h1>
-                </header>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Age</th>
-                            <th>Job</th>
-                            <th>Height</th>
-                            <th>Feature</th>
-                            <th>Color</th>
-                        </tr>
-                    </thead>
-                    <tbody>
+                <aside>
+                    <header>
+                        <h1>Die Liste der Personen</h1>
+                    </header>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Age</th>
+                                <th>Job</th>
+                                <th>Height</th>
+                                <th>Feature</th>
+                                <th>Color</th>
+                            </tr>
+                        </thead>
+                        <tbody>
 
-                        <tr th:each="person : ${dataList}">
-                            <td th:text="${person.name}">Name</td>
-                            <td th:text="${person.age}">Age</td>
-                            <td th:text="${person.job}">Job</td>
-                            <td th:text="${person.height}">Height</td>
-                            <td th:text="${person.feature}">Feature</td>
-                            <td th:text="${person.color}">Color</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <header>
-                    <h1>Die Liste der Waffen</h1>
-                </header>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Material</th>
-                            <th>Length</th>
-                            <th>Sound On Kill</th>
-                        </tr>
-                    </thead>
-                    <tbody>
+                            <tr th:each="person : ${dataList}">
+                                <td th:text="${person.name}">Name</td>
+                                <td th:text="${person.age}">Age</td>
+                                <td th:text="${person.job}">Job</td>
+                                <td th:text="${person.height}">Height</td>
+                                <td th:text="${person.feature}">Feature</td>
+                                <td th:text="${person.color}">Color</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </aside>
 
-                        <tr th:each="weapon : ${weaponList}">
-                            <td th:text="${weapon.name}">Name</td>
-                            <td th:text="${weapon.material}">Material</td>
-                            <td th:text="${weapon.length}">Length</td>
-                            <td th:text="${weapon.soundOnKill}">Sound On Kill</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <header>
-                    <h1>Die Liste der Räume</h1>
-                </header>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Location</th>
-                            <th>Decoration</th>
+                <aside>
+                    <header>
+                        <h1>Die Liste der Waffen</h1>
+                    </header>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Material</th>
+                                <th>Length</th>
+                                <th>Sound On Kill</th>
+                            </tr>
+                        </thead>
+                        <tbody>
 
-                        </tr>
-                    </thead>
-                    <tbody>
+                            <tr th:each="weapon : ${weaponList}">
+                                <td th:text="${weapon.name}">Name</td>
+                                <td th:text="${weapon.material}">Material</td>
+                                <td th:text="${weapon.length}">Length</td>
+                                <td th:text="${weapon.soundOnKill}">Sound On Kill</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </aside>
 
-                        <tr th:each="room : ${roomList}">
-                            <td th:text="${room.name}">Name</td>
-                            <td th:text="${room.location}">Location</td>
-                            <td th:text="${room.decoration}">Decoration</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <aside>
+                    <header>
+                        <h1>Die Liste der Räume</h1>
+                    </header>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Location</th>
+                                <th>Decoration</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr th:each="room : ${roomList}">
+                                <td th:text="${room.name}">Name</td>
+                                <td th:text="${room.location}">Location</td>
+                                <td th:text="${room.decoration}">Decoration</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </aside>
+
 
             </section>
         </main>

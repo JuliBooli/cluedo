@@ -1,9 +1,7 @@
 package ch.bbw.ja.cluedo.logic;
 
-import ch.bbw.ja.cluedo.datamodel.Crime;
-import ch.bbw.ja.cluedo.datamodel.DataService;
-
-import java.util.Random;
+import ch.bbw.ja.cluedo.model.Crime;
+import ch.bbw.ja.cluedo.model.DataService;
 
 /**
  * GameLogic
@@ -31,7 +29,16 @@ public class GameLogic {
     * @return true if games ends, false if another suggestion is allowed
     */
    public boolean evaluateSuggestion(Crime suggestion, Crime secret, int numberOfSuggestion, int maxNumberOfSuggestions){
+         // Compare the suggestion with the secret
+      boolean isCorrect = suggestion.getActor() == secret.getActor() &&
+              suggestion.getWeapon() == secret.getWeapon() &&
+              suggestion.getScene() == secret.getScene();
 
-      return false;
+
+      if (isCorrect ) {
+         return true; // Suggestion Correct => return true
+      } else {
+         return false; // The game continues if the suggestion is incorrect and the limit is not reached
+      }
    }
 }

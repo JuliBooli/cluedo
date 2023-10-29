@@ -1,9 +1,9 @@
 package ch.bbw.ja.cluedo.Control;
 
-import ch.bbw.ja.cluedo.datamodel.DataService;
-import ch.bbw.ja.cluedo.datamodel.Person;
-import ch.bbw.ja.cluedo.datamodel.Room;
-import ch.bbw.ja.cluedo.datamodel.Weapon;
+import ch.bbw.ja.cluedo.model.DataService;
+import ch.bbw.ja.cluedo.model.Person;
+import ch.bbw.ja.cluedo.model.Room;
+import ch.bbw.ja.cluedo.model.Weapon;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

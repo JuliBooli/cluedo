@@ -1,6 +1,4 @@
-package ch.bbw.ja.cluedo.datamodel;
-
-import java.util.List;
+package ch.bbw.ja.cluedo.model;
 
 
 public class Person {

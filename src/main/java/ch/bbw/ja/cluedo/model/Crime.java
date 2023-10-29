@@ -1,4 +1,4 @@
-package ch.bbw.ja.cluedo.datamodel;
+package ch.bbw.ja.cluedo.model;
 
 import java.util.ArrayList;
 import java.util.List;
