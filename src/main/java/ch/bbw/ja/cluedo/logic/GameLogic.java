@@ -1,7 +1,9 @@
 package ch.bbw.ja.cluedo.logic;
 
-import ch.bbw.ja.cluedo.model.Crime;
-import ch.bbw.ja.cluedo.model.DataService;
+import ch.bbw.ja.cluedo.model.*;
+
+import java.util.List;
+import java.util.Random;
 
 /**
  * GameLogic
@@ -11,13 +13,26 @@ import ch.bbw.ja.cluedo.model.DataService;
  */
 public class GameLogic {
 
+
    /**
     * Setup randomly the secret of the game.
     * @param service Contains the list for actors, weapons and scenes.
     * @param secret  Randomly generate the secret for actor, weapon and scene.
     */
    public void setupNewGame(DataService service, Crime secret){
-      //To be done
+      Random random = new Random();
+
+      List<Person> actors = service.getPeople();
+      List<Weapon> weapons = service.getWeapons();
+      List<Room> rooms = service.getRoom();
+
+      int secretActorIndex = random.nextInt(actors.size());
+      int secretWeaponIndex = random.nextInt(weapons.size());
+      int secretSceneIndex = random.nextInt(rooms.size());
+
+      secret.setActor(secretActorIndex);
+      secret.setWeapon(secretWeaponIndex);
+      secret.setScene(secretSceneIndex);
    }
 
    /**

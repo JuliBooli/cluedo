@@ -143,7 +143,4 @@ class GameLogicTest {
     void ActorWeaponSceneEqualThenReturnTrueAndHistoryWin(){
 
     }
-
-
-
 }

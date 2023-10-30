@@ -14,6 +14,11 @@ public class DataService {
     private List<Weapon> weapons;
     private List<Room> room;
 
+    private Crime suggestion;
+    private Crime secret;
+    private int numberOfSuggestions;
+    private int MAXNUMBEROFSUGGESTIONS;
+
     public DataService(){
         people = new ArrayList<>();
         weapons= new ArrayList<>();
