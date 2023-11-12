@@ -12,7 +12,7 @@ import java.util.List;
 public class DataService {
     private List<Person> people;
     private List<Weapon> weapons;
-    private List<Room> room;
+    private List<Room> room ;
 
     private Crime suggestion;
     private Crime secret;
