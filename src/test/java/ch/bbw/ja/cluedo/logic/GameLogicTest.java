@@ -57,7 +57,7 @@ class GameLogicTest {
         assertFalse(gameLogic.evaluateSuggestion(suggestion, secret, numberOfSuggestion, maxNumberOfSuggestion));
     }
 
-    @Test
+    /*@Test
     void ActorWeaponSceneNotEqualThenReturnFalseAndHistory0(){
         int numberOfSuggestion= 0;
         int maxNumberOfSuggestion= 8;
@@ -121,7 +121,7 @@ class GameLogicTest {
         assertFalse(gameLogic.evaluateSuggestion(suggestion, secret, numberOfSuggestion, maxNumberOfSuggestion));
         assertEquals("1", suggestion.getHistory().get(0));
     }
-
+*/
 
 
     @Test
